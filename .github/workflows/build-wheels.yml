@@ -50,12 +50,11 @@ jobs:
         if: runner.os == 'Windows'
 
       - name: Setup Mamba
-        uses: conda-incubator/setup-miniconda@v2.2.0
+        uses: conda-incubator/setup-miniconda@v3.1.1
         with:
           activate-environment: "build"
           python-version: ${{ matrix.pyver }}
-          miniforge-variant: Miniforge
-          miniforge-version: latest
+          miniforge-variant: Miniforge3
           use-mamba: true
           add-pip-as-python-dependency: true
           auto-activate-base: false
